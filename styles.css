@@ -4,10 +4,23 @@ body {
 h1 {
   text-align: center;
 }
-img {
+.center-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+#ChessText{
+  text-align: center;
+}
+
+.resize {
+  width: 500px;
+  height: auto;
+}
+
+h3 {
+  text-align: center;
+  border-style: solid;
+}
 
