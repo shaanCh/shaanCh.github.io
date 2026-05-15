@@ -1,6 +1,6 @@
  Terminal Portfolio
 
-> A single-page personal portfolio built to look, feel, and behave like a real Unix terminal — boots with `neofetch`, blinks at you, and waits for a command.
+> Welcome to my portfolio. I hope this design is interactive, intuitive, and fun to play around with. Hopefully you learn a thing or two about how I made this, walking through the code!
 
 ![status](https://img.shields.io/badge/status-live-4af626?style=flat-square&labelColor=0d1117)
 ![stack](https://img.shields.io/badge/stack-vanilla%20JS-5ec8ff?style=flat-square&labelColor=0d1117)
