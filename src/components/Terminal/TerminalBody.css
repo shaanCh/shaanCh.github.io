@@ -1,0 +1,24 @@
+.termBody {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px 20px 28px;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+.termBody::-webkit-scrollbar { width: 10px; }
+  .termBody::-webkit-scrollbar-track { background: transparent; }
+  .termBody::-webkit-scrollbar-thumb {
+    background: #1f2530;
+    border-radius: 10px;
+    border: 2px solid var(--bg);
+  }
+  .termBody::-webkit-scrollbar-thumb:hover { background: #2a323f; }
+
+.stream {
+    position: relative;
+    z-index: 4;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .stream > * { display: block; }

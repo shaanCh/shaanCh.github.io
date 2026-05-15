@@ -1,0 +1,25 @@
+:root {
+    /* ───────── Theme (edit these) ───────── */
+    --bg: #2e3136;
+    --bg-deep: #07090d;
+    --chrome: #1c1f26;
+    --chrome-edge: #2a2f3a;
+    --fg: #c9d1d9;
+    --muted: #7a8290;
+    --green: #4af626;
+    --green-dim: #2fa015;
+    --amber: #ffb454;
+    --cyan: #5ec8ff;
+    --magenta: #d27cff;
+    --red: #ff6b6b;
+    --yellow: #ffd866;
+    --blue: #7aa2ff;
+    --white: #f0f6fc;
+    --prompt-user: #4af626;
+    --prompt-host: #5ec8ff;
+    --prompt-path: #d27cff;
+    --error: #ff6b6b;
+    --selection: #214f1c;
+
+    --mono: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
+  }
