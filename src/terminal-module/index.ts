@@ -1,0 +1,1 @@
+export {boot} from './output.ts';

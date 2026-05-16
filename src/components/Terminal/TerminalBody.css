@@ -21,4 +21,29 @@
     white-space: pre-wrap;
     word-break: break-word;
   }
-  .stream > * { display: block; }
+.stream > * { display: block; }
+
+
+.prompt-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: baseline;
+    margin-top: 6px;
+  }
+
+.ps1 { white-space: pre; flex: 0 0 auto; }
+.ps1 .user { color: var(--prompt-user); font-weight: 700; }
+.ps1 .at, .ps1 .colon, .ps1 .dollar { color: var(--fg); }
+.ps1 .host { color: var(--prompt-host); font-weight: 700; }
+.ps1 .path { color: var(--prompt-path); font-weight: 500; }
+
+.output {
+    display: flex;
+    margin: 1px 0 8px;
+    white-space: pre-wrap;
+  }
+.output .welcome {
+  color: var(--green);
+  font-size: 10px;  
+}
