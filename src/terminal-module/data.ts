@@ -14,4 +14,13 @@ const USER ={
     website:    { url: "https://yoursite.com",                 label: "yoursite.com" },
 };
 
+function getStream(){
+    return document.getElementById('stream');
+}
+
+const TYPE_SPEED_CMD = 40;
+
+
 export { USER };
+export { getStream };
+export { TYPE_SPEED_CMD };

@@ -1,4 +1,6 @@
+import { getStream } from './data.ts';
 import { USER } from './data.ts';
+import { TYPE_SPEED_CMD } from './data.ts';
 
 function createEl(tag: string, className: string, html?: string) {
     const element = document.createElement(tag);
@@ -6,6 +8,13 @@ function createEl(tag: string, className: string, html?: string) {
     if(html) element.innerHTML = html;
     return element;
 }
+
+function scrolldown(){
+    const body = document.getElementById('body');
+    body!.scrollTop = body!.scrollHeight
+}
+
+async function sleep(sleepyTimeMS: number){await new Promise(r => setTimeout(r, sleepyTimeMS))}
 
 function buildWelcomeMessage() {
     const welcome = createEl('div', 'output welcome')
@@ -19,8 +28,24 @@ function buildPS1() {
     return ps1;
 }
 
+async function typeCommand(command: string, speed = TYPE_SPEED_CMD){
+    const promptLine = document.querySelector('.prompt-line');
+    if(!promptLine) return;
+    const commandEl = createEl('span', 'command-typed');
+    promptLine.appendChild(commandEl);
+    const cursor = createEl('span', 'cursor cursor--inline');
+    promptLine.appendChild(cursor);
+
+    for(let i = 0; i < command.length; i++){
+        commandEl.textContent += command[i];
+        // scrolldown()
+        await sleep(speed)
+    }
+    
+}
+
 export async function boot(){
-    const stream = document.getElementById('stream');
+    const stream = getStream();
     if(!stream) return;
     stream.innerHTML = '';
 
@@ -31,4 +56,5 @@ export async function boot(){
     promptLine.appendChild(buildPS1());
     
     stream?.appendChild(promptLine);
+    typeCommand('neofetch')
 }
