@@ -1,0 +1,60 @@
+.ascii {
+    font-family: var(--mono);
+    font-size: 7px;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: pre;
+    color: var(--green);
+    text-shadow: 0 0 6px rgba(74,246,38,.35);
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .ascii-art-face {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+   .nf-info {
+    font-size: 14px;
+    line-height: 1.55;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .nf-info .header {
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .nf-info .header .at { color: var(--fg); font-weight: 400; }
+  .nf-info .header .host { color: var(--amber); font-weight: 700; }
+  .nf-info .rule {
+    color: var(--muted);
+    margin: 2px 0 6px;
+    user-select: none;
+  }
+  .nf-row { display: block; }
+  .nf-row .k {
+    color: var(--cyan);
+    font-weight: 700;
+    display: inline-block;
+    min-width: 110px;
+  }
+  .nf-row .v { color: var(--fg); }
+  .nf-row .v a { color: var(--cyan); }
+
+  .neofetch-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: baseline;
+    margin-top: 6px;
+  }
+
+ 

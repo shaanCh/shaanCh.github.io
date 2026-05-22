@@ -8,9 +8,10 @@ const USER ={
     languages: ['JavaScript', 'TypeScript', 'Python', 'C++'],
     frameworks: ['React', 'Node.js', 'Express', 'Django'],
     tools: ['Git', 'Docker', 'AWS', 'Linux'],
-    github:     { url: "https://github.com/yourusername",      label: "github.com/yourusername" },
+    interests: ['Web Development', 'Open Source', 'AI/ML', 'Cybersecurity'],
+    github:     { url: "https://github.com/shaanCh",      label: "github.com/shaanCh" },
     linkedin:   { url: "https://linkedin.com/in/yourusername", label: "linkedin.com/in/yourusername" },
-    email:      { url: "mailto:you@example.com",               label: "you@example.com" },
+    email:      { url: "mailto:Shaan.Chauhan@colorado.edu",               label: "Shaan.Chauhan@colorado.edu" },
     website:    { url: "https://yoursite.com",                 label: "yoursite.com" },
 };
 

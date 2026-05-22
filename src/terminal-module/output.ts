@@ -1,6 +1,7 @@
 import { getStream } from './data.ts';
 import { USER } from './data.ts';
 import { TYPE_SPEED_CMD } from './data.ts';
+import renderNeofetch from './commands/neofetch.tsx';
 
 function createEl(tag: string, className: string, html?: string) {
     const element = document.createElement(tag);
@@ -28,7 +29,7 @@ function buildPS1() {
     return ps1;
 }
 
-async function typeCommand(command: string, speed = TYPE_SPEED_CMD){
+async function typeCommand(command: string, speed = TYPE_SPEED_CMD, callback?: () => void){
     const promptLine = document.querySelector('.prompt-line');
     if(!promptLine) return;
     const commandEl = createEl('span', 'command-typed');
@@ -41,7 +42,7 @@ async function typeCommand(command: string, speed = TYPE_SPEED_CMD){
         // scrolldown()
         await sleep(speed)
     }
-    
+    await callback?.();
 }
 
 export async function boot(){
@@ -56,5 +57,8 @@ export async function boot(){
     promptLine.appendChild(buildPS1());
     
     stream?.appendChild(promptLine);
-    typeCommand('neofetch')
+    await typeCommand('neofetch', TYPE_SPEED_CMD);
+    renderNeofetch();
 }
+
+export { createEl };
