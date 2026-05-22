@@ -10,10 +10,6 @@ function createEl(tag: string, className: string, html?: string) {
     return element;
 }
 
-function scrolldown(){
-    const body = document.getElementById('body');
-    body!.scrollTop = body!.scrollHeight
-}
 
 async function sleep(sleepyTimeMS: number){await new Promise(r => setTimeout(r, sleepyTimeMS))}
 
