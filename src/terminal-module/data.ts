@@ -19,9 +19,21 @@ function getStream(){
     return document.getElementById('stream');
 }
 
-const TYPE_SPEED_CMD = 40;
+const TYPE_SPEED_CMD = 150;
+
+const COMMANDS_HELP = [
+  ["help",     "show this list of commands"],
+  ["about",    "a short bio"],
+  ["projects", "selected projects & work"],
+  ["skills",   "languages, frameworks, tools"],
+  ["contact",  "where to find me"],
+  ["whoami",   "print current user"],
+  ["theme",    "toggle theme (green / amber)"],
+  ["clear",    "clear the terminal"]
+];
 
 
 export { USER };
 export { getStream };
 export { TYPE_SPEED_CMD };
+export { COMMANDS_HELP };
