@@ -10,7 +10,7 @@
     flex: 0 0 auto;
   }
 
-  .ascii-art-face {
+  .ascii-container {
     width: auto;
     height: auto;
     display: flex;
@@ -19,8 +19,14 @@
     gap: 2rem;
   }
 
+  /* targets the div injected by image-ascii-art */
+  .ascii-container > div:first-child {
+    width: 34% !important;
+    align-items: left !important;
+  }
+
    .nf-info {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.55;
     display: flex;
     flex-direction: column;
