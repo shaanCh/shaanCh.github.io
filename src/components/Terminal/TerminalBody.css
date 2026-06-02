@@ -103,22 +103,22 @@
 
 /* Commands Specific Styles */
 .section { margin: 6px 0 10px; }
-  .section h3 {
-    margin: 0 0 6px;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--amber);
-    letter-spacing: .02em;
-  }
-  .section h3::before {
-    content: "▶ ";
-    color: var(--green);
-  }
-  .section .sub {
-    color: var(--muted);
-    margin-bottom: 8px;
-    font-size: 13.5px;
-  }
+.section h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: .02em;
+}
+.section h3::before {
+  content: "▶ ";
+  color: var(--green);
+}
+.section .sub {
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 13.5px;
+}
 
 .help-grid {
     display: grid;
@@ -129,3 +129,38 @@
 .help-grid .cmd { color: var(--green); font-weight: 700; }
 .help-grid .desc { color: var(--fg); }
 
+.projects { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.project {
+  border: 1px solid #222831;
+  background: rgba(255,255,255,.015);
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+.project .title-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.project .name { color: var(--green); font-weight: 700; }
+.project .year { color: var(--muted); font-size: 12.5px; }
+.project .stack { color: var(--magenta); font-size: 12.5px; margin-left: auto; }
+.project .desc { color: var(--fg); margin-top: 4px; font-size: 13.5px; line-height: 1.55; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px 14px;
+  margin-top: 4px;
+}
+.skills-grid .skill-category .title { color: var(--cyan); font-weight: 700; margin-bottom: 2px; }
+.skills-grid .skill-category .items { color: var(--fg); }
+.skills-grid .skill-category .items > div { display: flex; align-items: baseline;}
+.skills-grid .skill-category .items .skill-name { min-width: 15ch; flex-shrink: 0}
+
+.bar {
+  display: inline-block;
+  color: var(--green);
+  letter-spacing: -1px;
+}
+.bar .empty { color: #72757c; }
+
+.contact-method { display: flex; gap: 10px; }
+.contact-method .contact-method-name {
+  color: var(--cyan); font-weight: 700; min-width: 110px;
+}

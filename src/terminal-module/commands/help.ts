@@ -2,7 +2,7 @@ import { createEl } from "../output";
 import { getStream } from "../data";
 import { COMMANDS_HELP } from "../data";
 
-export function commandHelp(){
+export async function commandHelp(){
     const helpDiv = createEl('div', 'out section');
     const title = createEl('h3', '', 'Available Commands');
     helpDiv.appendChild(title);

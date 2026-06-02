@@ -4,6 +4,10 @@ import { TYPE_SPEED_CMD } from './data.ts';
 import renderNeofetch from './commands/neofetch.tsx';
 import { commandHelp } from './commands/help.ts';
 import { commandClear } from './commands/clear.ts';
+import { commandAbout } from './commands/about.ts';
+import { commandProjects } from './commands/projects.ts';
+import { commandSkills } from './commands/skills.ts';
+import { commandContact } from './commands/contact.ts';
 
 let pendingPromptEl: HTMLElement | null = null;
 let activeInput: HTMLInputElement | null = null;
@@ -104,22 +108,19 @@ async function handleCommand(trimmed_input: string){
         busy = false;
         return; 
     }
-    const [name, ...args] = trimmed_input.split(/\s+/);
+    // const [name, ...args] = trimmed_input.split(/\s+/);
+    const name = trimmed_input.split(/\s+/)[0];
     const cmd = name.toLowerCase();
 
     try{
         switch(cmd){
             case 'help': await commandHelp(); break;
-            case 'about':
-                // show about info
-                break;
-            case 'projects':
-                // show projects
-                break;
-            case 'contact':
-                // show contact info
-                break;
+            case 'about': await commandAbout(); break;
+            case 'projects': await commandProjects(); break;
+            case 'skills': await commandSkills(); break;
+            case 'contact': await commandContact(); break;
             case 'clear': await commandClear(); break;
+            case 'neofetch': await renderNeofetch(); break;
             default:
                 const stream = getStream();
                 if(!stream) return;
