@@ -3,6 +3,7 @@ import { USER } from './data.ts';
 import { TYPE_SPEED_CMD } from './data.ts';
 import renderNeofetch from './commands/neofetch.tsx';
 import { commandHelp } from './commands/help.ts';
+import { commandClear } from './commands/clear.ts';
 
 let pendingPromptEl: HTMLElement | null = null;
 let activeInput: HTMLInputElement | null = null;
@@ -25,7 +26,7 @@ function buildWelcomeMessage() {
     return welcome;
 }
 
-function buildPS1() {
+export function buildPS1() {
     const ps1 = createEl('span', 'ps1');
     ps1.innerHTML = `<span class="user">${USER.handle}</span><span class="at">@</span><span class="host">${USER.host}</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>`
     return ps1;
@@ -118,6 +119,7 @@ async function handleCommand(trimmed_input: string){
             case 'contact':
                 // show contact info
                 break;
+            case 'clear': await commandClear(); break;
             default:
                 const stream = getStream();
                 if(!stream) return;
