@@ -8,6 +8,7 @@ import { commandAbout } from './commands/about.ts';
 import { commandProjects } from './commands/projects.ts';
 import { commandSkills } from './commands/skills.ts';
 import { commandContact } from './commands/contact.ts';
+import { commandBanner } from './commands/banner.ts';
 
 let pendingPromptEl: HTMLElement | null = null;
 let activeInput: HTMLInputElement | null = null;
@@ -53,28 +54,38 @@ async function typeCommand(command: string, speed = TYPE_SPEED_CMD, callback?: (
     promptLine.removeChild(cursor);
 }
 
+function helperBuildInputLine(){
+    const inputLine = createEl('div', 'cmd-input') as HTMLInputElement;
+    // inputLine.setAttribute('type', 'text');
+    // inputLine.setAttribute('id', 'cmd-inputLineut');
+    // inputLine.setAttribute('autocomplete', 'off');
+    // inputLine.setAttribute('autocorrect', 'off');
+    // inputLine.setAttribute('autocapitalize', 'off');
+    // inputLine.setAttribute('spellcheck', 'false');
+    // inputLine.setAttribute('aria-label', 'command line input');
+    inputLine.contentEditable = "true";
+
+    // inputLine.setAttribute('size', '1');
+    return inputLine;
+}
+
 function appendLivePrompt(){
     if(pendingPromptEl) pendingPromptEl.remove();
 
     const line = createEl('div', 'prompt-line');
     line.appendChild(buildPS1());
 
-    const inp = createEl('input', 'cmd-input');
-    inp.setAttribute('id', 'cmd-input');
-    inp.setAttribute('autocomplete', 'off');
-    inp.setAttribute('autocorrect', 'off');
-    inp.setAttribute('autocapitalize', 'off');
-    inp.setAttribute('spellcheck', 'false');
-    inp.setAttribute('aria-label', 'command line input');
+    const inp = helperBuildInputLine();
 
-    // const userOutputText  = createEl('div', 'cmd-output');
     line.appendChild(inp);
-    // line.appendChild(userOutputText);
 
     const cursor = createEl('span', 'cursor');
     line.appendChild(cursor);
 
-    inp.addEventListener('keydown', userInputKeypress);
+    inp.addEventListener('keydown', (e) => userInputKeypress(e));
+
+    const termBody = document.querySelector('.termBody');
+    termBody!.addEventListener('click', () => {inp.focus()});
 
     const stream = getStream();
     if(!stream) return;
@@ -87,7 +98,7 @@ function appendLivePrompt(){
 async function userInputKeypress(e: KeyboardEvent){
     if(e.key === 'Enter'){
         e.preventDefault();
-        const value = activeInput!.value.trim();
+        const value = (activeInput!.textContent ?? '').trim();
         //replace with static text
         const parent = activeInput!.parentElement!;
         const cursor = parent.querySelector('.cursor')!;
@@ -121,6 +132,7 @@ async function handleCommand(trimmed_input: string){
             case 'contact': await commandContact(); break;
             case 'clear': await commandClear(); break;
             case 'neofetch': await renderNeofetch(); break;
+            case 'banner': await commandBanner(); break;
             default:
                 const stream = getStream();
                 if(!stream) return;
@@ -153,6 +165,7 @@ export async function boot(){
     
     stream?.appendChild(promptLine);
     await typeCommand('neofetch', TYPE_SPEED_CMD);
+    await commandBanner();
     renderNeofetch();
 
     const hint = createEl('div', 'out hint');
