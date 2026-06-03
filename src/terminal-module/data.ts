@@ -2,7 +2,7 @@ const USER ={
     name: 'Shaan Chauhan',
     handle: 'shaan',
     host: 'portfolio',
-    role: 'Full Stack Intern',
+    role: 'Full Stack Intern @ Keysight Technologies',
     location: 'Boulder, CO',
     education: 'B.S Computer Science | Minor Electrical Engineering | University of Colorado Boulder',
     languages: ['JavaScript', 'TypeScript', 'Python', 'C++'],
@@ -10,9 +10,9 @@ const USER ={
     tools: ['Git', 'Docker', 'AWS', 'Linux'],
     interests: ['Web Development', 'Open Source', 'AI/ML', 'Cybersecurity'],
     github:     { url: "https://github.com/shaanCh",      label: "github.com/shaanCh" },
-    linkedin:   { url: "https://linkedin.com/in/yourusername", label: "linkedin.com/in/yourusername" },
+    linkedin:   { url: "https://www.linkedin.com/in/shaan-chauhan", label: "linkedin.com/shaanChauhan" },
     email:      { url: "mailto:Shaan.Chauhan@colorado.edu",               label: "Shaan.Chauhan@colorado.edu" },
-    website:    { url: "https://yoursite.com",                 label: "yoursite.com" },
+    website:    { url: "https://shaanCh.github.io",                 label: "ShaanChauhan.com" },
 };
 
 function getStream(){

@@ -8,8 +8,8 @@ const AsciiArtFace = () => {
   const imgRef = useRef(new Image(100, 100));
   const parentRef = useRef<HTMLElement>(null);
   const [ImageLoaded, setImageLoaded] = useState(false);
-  const charsPerLine = 63;
-  const charsPerColumn = 59;
+  const charsPerLine = 73;
+  const charsPerColumn = 69;
 
   useEffect(() => {
     const img = imgRef.current;

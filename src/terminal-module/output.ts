@@ -26,7 +26,7 @@ export function createEl(tag: string, className: string, html?: string) {
 async function sleep(sleepyTimeMS: number){await new Promise(r => setTimeout(r, sleepyTimeMS))}
 
 function buildWelcomeMessage() {
-    const welcome = createEl('div', 'output welcome')
+    const welcome = createEl('p', 'output welcome')
     welcome.textContent = `Last login: ${new Date().toString().slice(0,24)}`
     return welcome;
 }
@@ -56,37 +56,34 @@ async function typeCommand(command: string, speed = TYPE_SPEED_CMD, callback?: (
 
 function helperBuildInputLine(){
     const inputLine = createEl('div', 'cmd-input') as HTMLInputElement;
-    // inputLine.setAttribute('type', 'text');
-    // inputLine.setAttribute('id', 'cmd-inputLineut');
-    // inputLine.setAttribute('autocomplete', 'off');
-    // inputLine.setAttribute('autocorrect', 'off');
-    // inputLine.setAttribute('autocapitalize', 'off');
-    // inputLine.setAttribute('spellcheck', 'false');
-    // inputLine.setAttribute('aria-label', 'command line input');
     inputLine.contentEditable = "true";
 
-    // inputLine.setAttribute('size', '1');
     return inputLine;
 }
 
 function appendLivePrompt(){
     if(pendingPromptEl) pendingPromptEl.remove();
 
+    //Builing the prompt line
     const line = createEl('div', 'prompt-line');
     line.appendChild(buildPS1());
 
+    // Building the input line
     const inp = helperBuildInputLine();
-
     line.appendChild(inp);
 
+    //Building the blinking cursor
     const cursor = createEl('span', 'cursor');
     line.appendChild(cursor);
 
+    // adding event listener for user input to detect keypresses and handle command execution
     inp.addEventListener('keydown', (e) => userInputKeypress(e));
 
+    //Making sure if user clicks anywhere on the terminal body, the input gets focused so they can start typing
     const termBody = document.querySelector('.termBody');
     termBody!.addEventListener('click', () => {inp.focus()});
 
+    //Adding prompt line to stream and setting active input and pending prompt references for later use
     const stream = getStream();
     if(!stream) return;
     stream.appendChild(line);
@@ -169,7 +166,7 @@ export async function boot(){
     renderNeofetch();
 
     const hint = createEl('div', 'out hint');
-    hint.innerHTML = `type <span class="accent">help</span> to see commands, or try <span class="accent">projects</span>, <span class="accent">about</span>, <span class="accent">contact</span>.`;
+    hint.innerHTML = `type <span class="accent">help</span> to see commands, or try <span class="accent">projects</span>, <span class="accent">about</span>, <span class="accent">contact</span>, <span class="accent">skills</span>`;
     stream.appendChild(hint);
 
     appendLivePrompt();

@@ -1,21 +1,21 @@
 :root {
     /* ───────── Theme (edit these) ───────── */
-    --bg: #1f2022;
-    --bg-deep: #07090d;
+    --bg: #121414;
+    --bg-deep: #16181a;
     --chrome: #1c1f26;
     --chrome-edge: #2a2f3a;
     --fg: #c9d1d9;
     --muted: #7a8290;
     --green: #6adf53;
     --green-dim: #2fa015;
-    --amber: #d07e54;
+    --amber: #c04916;
     --cyan: #5ec8ff;
     --magenta: #d27cff;
     --red: #ff6b6b;
     --yellow: #ffd866;
     --blue: #3164db;
     --white: #f0f6fc;
-    --prompt-user: #4af626;
+    --prompt-user: #52d438;
     --prompt-host: #4233b7;
     --prompt-path: #d27cff;
     --error: #ff6b6b;
