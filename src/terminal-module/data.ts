@@ -5,10 +5,10 @@ const USER ={
     role: 'Full Stack Intern @ Keysight Technologies',
     location: 'Boulder, CO',
     education: 'B.S Computer Science | Minor Electrical Engineering | University of Colorado Boulder',
-    languages: ['JavaScript', 'TypeScript', 'Python', 'C++'],
-    frameworks: ['React', 'Node.js', 'Express', 'Django'],
-    tools: ['Git', 'Docker', 'AWS', 'Linux'],
-    interests: ['Web Development', 'Open Source', 'AI/ML', 'Cybersecurity'],
+    languages: ['JavaScript', ' Python', ' C#', ' C/C++'],
+    frameworks: ['React ', '· Node.js ', '· Typescript ', '· Vue.js ', '· ASP.NET WEB API ', '· Flask '],
+    tools: ['Git ', '· Docker ', '· CI/CD ', '· Linux ', '· AI/ML ', '· Raspberry Pi'],
+    interests: ['Web Development ', '· Open Source ', '· Circuits ', '· Cybersecurity/HackTheBox ', '· IOT ', '· Sushi'],
     github:     { url: "https://github.com/shaanCh",      label: "github.com/shaanCh" },
     linkedin:   { url: "https://www.linkedin.com/in/shaan-chauhan", label: "linkedin.com/shaanChauhan" },
     email:      { url: "mailto:Shaan.Chauhan@colorado.edu",               label: "Shaan.Chauhan@colorado.edu" },
@@ -31,27 +31,26 @@ const COMMANDS_HELP = [
 //   ["theme",    "toggle theme (green / amber)"],
   ["clear",    "clear the terminal"]
 ];
-
 const PROJECTS = [
-  { name: "lumen",      year: "2025", stack: "TypeScript · Next.js · Postgres", desc: "Real-time collaborative document editor with CRDT-based sync and 30ms median round-trip." },
-  { name: "starpath",   year: "2024", stack: "Rust · WebGL · WASM",             desc: "Browser-based celestial navigation simulator. Renders 120k stars at 60fps with custom shaders." },
-  { name: "pico-shell", year: "2024", stack: "C · POSIX",                       desc: "Minimal UNIX shell in ~1.2k LOC. Pipes, redirection, job control, and a tiny line editor." },
-  { name: "ferncast",   year: "2023", stack: "Go · gRPC · React",               desc: "Self-hosted podcast feed aggregator with full-text search across 8M+ episodes." },
-  { name: "noteboard",  year: "2023", stack: "Python · FastAPI · htmx",         desc: "Plaintext-first note app with bidirectional links. Used daily by ~200 students on campus." },
+  { name: "CarFINDa", year: "2026", stack: "Python · TypeScript · Next.js · Supabase · Playwright ",  desc: "AI-powered used car intelligence platform that aggregates listings from multiple marketplaces, scores every vehicle against real federal safety and emissions data, and gives you a conversational AI advisor that explains scores, flags bad deals, and generates data-backed negotiation strategies — all from a single natural language search.", url: "https://github.com/shaanCh/CarFINDa" },
+  { name: "AxonIQ",   year: "2025", stack: "ESP32 · React · Hardware",               desc: "Mini Startup Idea - Built an attachable IoT acceleration‑sensing system with real‑time server communication, earning the Audience Choice Award and developed in collaboration with founders, C‑suite leaders, and fellow entrepreneurs. Clicking on this will to lead you to the same slide deck we used to present to over 200 people in the Boulder Startup Community", url: "https://canva.link/fh0vg4z99kl2de6" },
+  { name: "EcoVision",      year: "2025", stack: "Python · TypeScript · React · Firebase", desc: "Intelligent recycling assistant that uses computer vision and AI to help users identify recyclable items, learn proper disposal methods, and track their environmental impact.", url:"https://github.com/shaanCh/EcoVision" },
+  { name: "App-Control-LED",   year: "2023", stack: "Python · Dart · Flutter",  desc: "Created a Android Mobile app that let me control my LED's remotely from the comfort of my bed.", url:"https://github.com/shaanCh/Flutter-App-Control-LED" },
+  { name: "Personal-Portfolio-Website",   year: "2026", stack: "React · Typescript · CSS",  desc: "Check out how I made this website!", url:"https://github.com/shaanCh/shaanCh.github.io" },
 ];
 
 const SKILLS = [
-  { title: "Languages",       items: [["TypeScript",9],["Python",9],["Rust",6],["Go",7],["C/C++",6],["SQL",8]] },
-  { title: "Frontend",        items: [["React",9],["Next.js",8],["CSS/Tailwind",8],["WebGL",6]] },
-  { title: "Backend",         items: [["Node.js",8],["FastAPI",8],["Postgres",8],["Redis",7]] },
-  { title: "Infra / Tooling", items: [["Docker",8],["Linux",9],["AWS",7],["Git",10]] },
+  { title: "Languages",       items: [["Javascript",8],["Python",9],["C#",8],["Go",7],["C/C++",6],["SQL",7]] },
+  { title: "Frontend",        items: [["React",9],["Vue.js", 8],["CSS/Tailwind",7],["Typescript",7]] },
+  { title: "Backend",         items: [["Node.js",8],["FastAPI",8],["Postgres",5],["Redis",4]] },
+  { title: "Infra / Tooling", items: [["Docker",8],["Linux",9],["CI/CD",7],["Git",8]] },
 ];
 
 const CONTACT = [
     {email:      { url: "mailto:Shaan.Chauhan@colorado.edu",  label: "Shaan.Chauhan@colorado.edu" }},
     {github:     { url: "https://github.com/shaanCh",      label: "github.com/shaanCh" }},
-    {linkedin:   { url: "https://linkedin.com/in/yourusername", label: "linkedin.com/in/yourusername" }},
-    {website:    { url: "https://yoursite.com",                 label: "yoursite.com" }}
+    {linkedin:   { url: "https://www.linkedin.com/in/shaan-chauhan", label: "linkedin.com/in/shaan-chauhan" }},
+    {website:    { url: "https://shaanCh.github.io",                 label: "shaanChauhan.com" }}
 ]
 
 

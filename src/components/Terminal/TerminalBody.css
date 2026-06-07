@@ -194,7 +194,7 @@
   color: var(--green);
   letter-spacing: -1px;
 }
-.bar .empty { color: #222222; }
+.bar .empty { color: #5b5a5a; display: inline-block; letter-spacing: -1px;}
 
 .contact-method { display: flex; gap: 10px; }
 .contact-method .contact-method-name {
@@ -208,6 +208,48 @@
   line-height: 1;
   margin: 12px;
   white-space: pre;
+}
+
+.university {
+  color: rgb(206, 181, 148);
+  font-weight: 500;
+}
+
+.bold { font-weight: 700; color: var(--green); }
+
+.about-text p {
+  margin: 0 0 10px;
+  color: var(--fg);
+  /* font-size: 18px; */
+  line-height: 1.6;
+  text-align: left;
+}
+.spinach {
+  color: darkgreen;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.beet-juice{
+  color: #7d0000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tumeric{
+  color: #b36f00;
+  font-size: 12px;
+  font-weight: 700;
+}
+.walnuts{
+  color: #654321;
+  font-size: 12px;
+  font-weight: 700;
+}
+.fish{
+  color: #887813;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {

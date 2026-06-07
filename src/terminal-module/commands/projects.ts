@@ -16,6 +16,9 @@ export async function commandProjects(){
             <span class="stack">${proj.stack}</span>
         </div>
         <div class="desc">${proj.desc}</div>`;
+        card.addEventListener('click', () => {
+            window.open(proj.url, '_blank');
+        });
         projectsList.appendChild(card);
 
     }

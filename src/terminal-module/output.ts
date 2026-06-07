@@ -61,6 +61,10 @@ function helperBuildInputLine(){
     return inputLine;
 }
 
+// function typeWriterOutput(node: HTMLElement, speed: number){
+
+// }
+
 function appendLivePrompt(){
     if(pendingPromptEl) pendingPromptEl.remove();
 
