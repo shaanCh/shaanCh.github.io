@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-label="SC initials in ASCII block letters">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.2" flood-color="#f6f6f6" flood-opacity="0.767"></feDropShadow>
+    </filter>
+  </defs>
+
+  
+  <text x="50%" y="46" text-anchor="middle" font-family="&#39;JetBrains Mono&#39;,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="23" font-weight="700" fill="#6adf53" filter="url(#glow)" xml:space="preserve" style="letter-spacing:0">
+    <tspan x="50%" dy="0">███████╗ ██████╗</tspan>
+    <tspan x="50%" dy="26">██╔════╝██╔════╝</tspan>
+    <tspan x="50%" dy="26">███████╗██║     </tspan>
+    <tspan x="50%" dy="26">╚════██║██║     </tspan>
+    <tspan x="50%" dy="26">███████║╚██████╗</tspan>
+    <tspan x="50%" dy="26">╚══════╝ ╚═════╝</tspan>
+  </text>
+</svg>
