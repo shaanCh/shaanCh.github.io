@@ -70,6 +70,7 @@ Add these new commands + effects
 | `theme` | changes theme of terminal to users choosing  |
 
 - domain name and hosting
+- Mobile screens 
 
 
 ... to be continued
