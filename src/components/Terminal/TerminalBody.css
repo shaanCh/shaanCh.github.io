@@ -257,11 +257,17 @@
   .ascii { font-size: 6px; }
 }
 @media (max-width: 768px) {
+  .ascii-container { flex-direction: column;}
+  .ascii-container > div:first-child {
+    justify-content: unset !important;
+  }
   .term { inset: 10px; border-radius: 8px; }
   .term__bar { height: 32px; padding: 0 10px; }
   .light { width: 11px; height: 11px; }
   .title { font-size: 11.5px; }
   .bar-right { display: none; }
+  .out .banner {display: none;}
+  .out.hint { font-size: 8px; }
   .term__body { padding: 12px 14px 20px; font-size: 13.5px; }
   .neofetch {
     grid-template-columns: 1fr;
@@ -269,9 +275,14 @@
     justify-items: start;
   }
   .ascii { font-size: 5px; }
-  .nf-row .k { min-width: 90px; }
+  .nf-row { min-width: 70px; font-size: 8px; }
+  .nf-row .k { min-width: 50px; font-size: 8px; }
+  .prompt-line { font-size: 10px; }
   .skills-grid { grid-template-columns: 1fr; }
   .help-grid { grid-template-columns: 100px 1fr; }
+  .project { padding: 7px; }
+  .project .desc { font-size: 7px; }
+  .contact-method { font-size: 8px; }
 }
 @media (max-width: 480px) {
   .ascii { font-size: 4px; }
